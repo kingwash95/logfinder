@@ -8,13 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="709b5eeb-0290-4707-bafc-cf8be4f00f8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MTreeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MTreeModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/FileFinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FileFinder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/logfinder.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MTreeModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MTreeModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Panel$JThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Panel$JThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Panel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Panel.class" afterDir="false" />
     </list>
@@ -152,6 +146,7 @@
       <workItem from="1575975077348" duration="248000" />
       <workItem from="1575975341297" duration="146000" />
       <workItem from="1575975654830" duration="115000" />
+      <workItem from="1575976194404" duration="450000" />
     </task>
     <servers />
   </component>
