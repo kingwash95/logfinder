@@ -1,4 +1,5 @@
 
+import javax.swing.*;
 import java.awt.*;
 
 public class Frame extends javax.swing.JFrame {
@@ -10,9 +11,10 @@ public class Frame extends javax.swing.JFrame {
         container.add(panel);
         setDefaultCloseOperation(3);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds(0, 0, screenSize.width, screenSize.height );
-        setResizable(true);
+        setBounds(0, 0, 1050, 500 );
+        setResizable(false);
         setVisible(true);
+
 
     }
 }
