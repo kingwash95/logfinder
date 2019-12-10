@@ -7,7 +7,7 @@ import java.util.List;
 
 public class FileFinder {
 
-    public  void search(final String pattern, final File folder, ArrayList<String> result) {
+    public void search(final String pattern, final File folder, ArrayList<String> result) {
         for (final File f : folder.listFiles()) {
 
             if (f.isDirectory()) {
@@ -24,14 +24,13 @@ public class FileFinder {
     }
 
 
-
     public void searchFile(String fileName, String phrase, List<String> allFind) throws IOException {
         File file = new File(fileName);
         FileReader fileFlow = new FileReader(file);
         BufferedReader reader = new BufferedReader(fileFlow);
         String line;
-        while((line = reader.readLine()) != null ){
-            if(line.contains(phrase)){
+        while ((line = reader.readLine()) != null) {
+            if (line.contains(phrase)) {
                 allFind.add(file.getAbsolutePath());
                 break;
             }

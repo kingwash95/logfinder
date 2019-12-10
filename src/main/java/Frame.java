@@ -10,7 +10,6 @@ public class Frame extends javax.swing.JFrame {
         Container container = getContentPane();
         container.add(panel);
         setDefaultCloseOperation(3);
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         setBounds(0, 0, 1050, 500 );
         setResizable(false);
         setVisible(true);

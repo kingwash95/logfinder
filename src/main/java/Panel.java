@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class Panel extends JPanel implements TreeSelectionListener{
+public class Panel extends JPanel implements TreeSelectionListener {
     private FileFinder fileFinder;
     private JTextField addresField;
     private JButton directoryButton;
@@ -70,7 +70,6 @@ public class Panel extends JPanel implements TreeSelectionListener{
         splitPane.setPreferredSize(new Dimension(1000, 300));
 
 
-
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
         this.add(new JLabel("Адрес директории: ", SwingConstants.LEFT));
         this.add(addresField);
@@ -102,7 +101,7 @@ public class Panel extends JPanel implements TreeSelectionListener{
 
     }
 
-    private void chooseDirectory(){
+    private void chooseDirectory() {
         fileChooser.setDialogTitle("Выбор директории");
         fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int result = fileChooser.showOpenDialog(getParent());
@@ -111,14 +110,14 @@ public class Panel extends JPanel implements TreeSelectionListener{
 
     }
 
-    private void searchFiles()  {
+    private void searchFiles() {
         String addresString = addresField.getText();
         String typeFileString = (String) fileType.getSelectedItem();
 
         String textString = textField.getText();
 
-            File fileDirectory = new File(addresString);
-            if(fileDirectory.exists()){
+        File fileDirectory = new File(addresString);
+        if (fileDirectory.exists()) {
             ArrayList<String> filesInDirectory = new ArrayList<String>();
             String pattern = ".*\\" + typeFileString;
             ArrayList<String> allFind = new ArrayList<String>();
@@ -140,23 +139,20 @@ public class Panel extends JPanel implements TreeSelectionListener{
                 }
                 treeModel.load(allFind);
             }
-            }
-            else{
-                JOptionPane.showMessageDialog(Panel.this,
-                        "Вы указали несуществующую директорию, повторите поиск заново",
-                        "Окно сообщения", JOptionPane.INFORMATION_MESSAGE);
-            }
-
+        } else {
+            JOptionPane.showMessageDialog(Panel.this,
+                    "Вы указали несуществующую директорию, повторите поиск заново",
+                    "Окно сообщения", JOptionPane.INFORMATION_MESSAGE);
+        }
 
 
     }
 
-    private void displayURL( URL url){
-        try{
-            if (url != null){
+    private void displayURL(URL url) {
+        try {
+            if (url != null) {
                 htmlPane.setPage(url);
-            }
-            else{
+            } else {
                 htmlPane.setPage("FILE NOT CHOSEN ");
             }
         } catch (IOException e) {
@@ -166,11 +162,11 @@ public class Panel extends JPanel implements TreeSelectionListener{
 
     class JThread extends Thread {
 
-        JThread(String name){
+        JThread(String name) {
             super(name);
         }
 
-        public void run(){
+        public void run() {
             System.out.printf("%s started... \n", Thread.currentThread().getName());
             searchFiles();
             System.out.printf("%s finished... \n", Thread.currentThread().getName());

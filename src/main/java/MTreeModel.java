@@ -13,7 +13,7 @@ public class MTreeModel extends DefaultTreeModel {
 
     public void load(ArrayList<String> allFind) {
         rootNode.removeAllChildren();
-        for (String s : allFind){
+        for (String s : allFind) {
 
             DefaultMutableTreeNode childNode = new DefaultMutableTreeNode(s);
             rootNode.add(childNode);
