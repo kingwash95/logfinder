@@ -5,8 +5,8 @@ This small application was created to search for text files in the directory you
 ### Features
 
 -Ability to specify a search directory;
--Ability to select text file extensions. At the moment there are only two extensions in the application, but you can easily add the missing ones to the program code.
-Enter text to search;
+-Ability to select text file extensions. 
+-Enter text to search;
 -If you enter an invalid non-existent directory or if no files are found, the corresponding information messages will appear.
 
 ### Images
