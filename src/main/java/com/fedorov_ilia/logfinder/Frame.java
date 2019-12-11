@@ -1,6 +1,5 @@
 package com.fedorov_ilia.logfinder;
 
-import javax.swing.*;
 import java.awt.*;
 
 public class Frame extends javax.swing.JFrame {

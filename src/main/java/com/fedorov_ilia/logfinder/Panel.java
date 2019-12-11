@@ -10,14 +10,14 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.regex.PatternSyntaxException;
 
 public class Panel extends JPanel implements TreeSelectionListener {
     private FileFinder fileFinder;
     private JTextField addresField;
     private JButton directoryButton;
     private JFileChooser fileChooser;
-    private String[] typeOfFiles = {".log", ".txt"};
-    private JComboBox fileType;
+    private JTextField fileType;
     private JTextArea textField;
     private JScrollPane scrollBar;
     private JButton searchButton;
@@ -42,8 +42,8 @@ public class Panel extends JPanel implements TreeSelectionListener {
         fileChooser = new JFileChooser();
         directoryButton.addActionListener(e -> chooseDirectory());
 
-        fileType = new JComboBox(typeOfFiles);
-        fileType.setSelectedIndex(0);
+       fileType = new JTextField(".log", 6);
+       fileType.setFont(new Font("Dialog", Font.PLAIN, 14));
 
         textField = new JTextArea("Введите текст для поиска", 1, 50);
         textField.setFont(new Font("Dialog", Font.PLAIN, 14));
@@ -66,11 +66,11 @@ public class Panel extends JPanel implements TreeSelectionListener {
         splitPane.setTopComponent(treeView);
         splitPane.setBottomComponent(htmlView);
 
-        Dimension minimumSize = new Dimension(1025, 300);
+        Dimension minimumSize = new Dimension(1025, 395);
         htmlView.setMinimumSize(minimumSize);
         treeView.setMinimumSize(minimumSize);
         splitPane.setDividerLocation(200);
-        splitPane.setPreferredSize(new Dimension(1025, 300));
+        splitPane.setPreferredSize(new Dimension(1025, 395));
 
 
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -114,7 +114,8 @@ public class Panel extends JPanel implements TreeSelectionListener {
 
     private void searchFiles() {
         String addresString = addresField.getText();
-        String typeFileString = (String) fileType.getSelectedItem();
+        String typeFileString = fileType.getText();
+
 
         String textString = textField.getText();
 
@@ -123,7 +124,13 @@ public class Panel extends JPanel implements TreeSelectionListener {
             ArrayList<String> filesInDirectory = new ArrayList<String>();
             String pattern = ".*\\" + typeFileString;
             ArrayList<String> allFind = new ArrayList<String>();
-            fileFinder.search(pattern, fileDirectory, filesInDirectory);
+            try{
+                fileFinder.search(pattern, fileDirectory, filesInDirectory);
+            }catch (PatternSyntaxException ex){
+                JOptionPane.showMessageDialog(Panel.this,
+                        "Неверно введено расширение для файла, попробуйте ввести по следующему примеру: '.ваше_расширение'",
+                        "Окно сообщения", JOptionPane.ERROR_MESSAGE);
+            }
             for (String s : filesInDirectory) {
                 try {
                     fileFinder.searchFile(s, textString, allFind);
