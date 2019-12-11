@@ -7,13 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709b5eeb-0290-4707-bafc-cf8be4f00f8a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedorov_ilia/logfinder/FileFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedorov_ilia/logfinder/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MTreeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedorov_ilia/logfinder/MTreeModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedorov_ilia/logfinder/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedorov_ilia/logfinder/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +145,7 @@
       <workItem from="1575975341297" duration="146000" />
       <workItem from="1575975654830" duration="115000" />
       <workItem from="1575976194404" duration="450000" />
-      <workItem from="1576054713936" duration="1278000" />
+      <workItem from="1576054713936" duration="1784000" />
     </task>
     <servers />
   </component>
