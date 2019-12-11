@@ -56,6 +56,7 @@ public class Panel extends JPanel implements TreeSelectionListener {
         treeModel = new MTreeModel();
         tree = new JTree(treeModel);
 
+
         tree.addTreeSelectionListener(this);
         JScrollPane treeView = new JScrollPane(tree);
         htmlPane = new JEditorPane();
@@ -65,11 +66,11 @@ public class Panel extends JPanel implements TreeSelectionListener {
         splitPane.setTopComponent(treeView);
         splitPane.setBottomComponent(htmlView);
 
-        Dimension minimumSize = new Dimension(1000, 300);
+        Dimension minimumSize = new Dimension(1025, 300);
         htmlView.setMinimumSize(minimumSize);
         treeView.setMinimumSize(minimumSize);
-        splitPane.setDividerLocation(300);
-        splitPane.setPreferredSize(new Dimension(1000, 300));
+        splitPane.setDividerLocation(200);
+        splitPane.setPreferredSize(new Dimension(1025, 300));
 
 
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -82,7 +83,6 @@ public class Panel extends JPanel implements TreeSelectionListener {
         this.add(new JLabel("Текст для поиска:", SwingConstants.LEFT));
         this.add(scrollBar);
         this.add(searchButton);
-
         this.add(splitPane);
     }
 
@@ -143,6 +143,9 @@ public class Panel extends JPanel implements TreeSelectionListener {
                     System.out.println(s + "\n");
                 }
                 treeModel.load(allFind);
+                JOptionPane.showMessageDialog(Panel.this,
+                        "Поиск завершен",
+                        "Окно сообщения", JOptionPane.INFORMATION_MESSAGE);
             }
         } else {
             JOptionPane.showMessageDialog(Panel.this,
