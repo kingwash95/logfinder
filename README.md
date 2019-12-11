@@ -4,10 +4,10 @@ This small application was created to search for text files in the directory you
 
 ### Features
 
--Ability to specify a search directory;
--Ability to select text file extensions. 
--Enter text to search;
--If you enter an invalid non-existent directory or if no files are found, the corresponding information messages will appear.
+- Ability to specify a search directory;
+- Ability to select text file extensions;
+- Enter text to search;
+- If you enter an invalid non-existent directory or if no files are found, the corresponding information messages will appear.
 
 ### Images
 
