@@ -1,3 +1,5 @@
+package com.fedorov_ilia.logfinder;
+
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
@@ -127,6 +129,9 @@ public class Panel extends JPanel implements TreeSelectionListener {
                     fileFinder.searchFile(s, textString, allFind);
                 } catch (IOException ex) {
                     ex.printStackTrace();
+                    JOptionPane.showMessageDialog(Panel.this,
+                            "Возникли проблемы с файлом по пути " + s,
+                            "Окно сообщения", JOptionPane.ERROR_MESSAGE);
                 }
             }
 
@@ -157,6 +162,10 @@ public class Panel extends JPanel implements TreeSelectionListener {
             }
         } catch (IOException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(Panel.this,
+                    "Невозможно отобразить файл",
+                    "Окно сообщения", JOptionPane.ERROR_MESSAGE);
+
         }
     }
 

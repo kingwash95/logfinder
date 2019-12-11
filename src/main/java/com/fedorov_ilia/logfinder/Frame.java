@@ -1,3 +1,4 @@
+package com.fedorov_ilia.logfinder;
 
 import javax.swing.*;
 import java.awt.*;

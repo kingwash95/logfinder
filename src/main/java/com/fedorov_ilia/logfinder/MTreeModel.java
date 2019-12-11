@@ -1,3 +1,5 @@
+package com.fedorov_ilia.logfinder;
+
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeNode;
